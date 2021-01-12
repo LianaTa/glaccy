@@ -25,7 +25,7 @@
 	--basic-extra-black: #231F20;
 }
 body {
-
+ min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -48,7 +48,7 @@ body {
 	padding-left: 27px;
 	padding-right:27px; 
 	margin: 0px auto ;
-
+	position: relative;
 }
 
 a{
@@ -445,13 +445,18 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 .contacts{
 	margin:40px 0px;
 	padding:62px 27px 62px 0px;
-	height:430px;
+	width:100%;
+	min-height:430px;
 	background-image: url("../img/map.jpg");
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 100%;
 }
 .contacts__pin{
-	margin:74px 0px 0px 255px;
+	position: absolute;
+	left:15%;
+	/*margin:74px 0px 0px 266px;*/
+
 }
 .contacts__info{
 	width:253px;
