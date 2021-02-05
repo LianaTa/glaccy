@@ -237,6 +237,7 @@ p{
 	font-size:18px;
 	line-height: 24px;
 	text-align: center;
+	font-weight: bold;
 	background: linear-gradient(180deg,  var(--basic-orange-gradient-1) 0%, var(--basic-orange-gradient-2) 100%);
 	box-shadow: 0px 2px 2px 0px #AC1000 64 %;
  	border-radius: 70px;
@@ -264,6 +265,7 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 	float: right;
 }
 .btn--hits{display: none;}
+
 /*hits*/
 .hits__list{
 	padding-left: 0px;
@@ -583,4 +585,100 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 .copyrights a{
 	color: var(--basic-white);
 }
+/*modal window cotact us*/
+.modal{
+	position: fixed;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	margin: auto;
+  	display: none;
+  	color: var(--basic-black);
+  	background-color:  #E5E5E5;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Contact us */
+
+.modal-contact{
+  display: none;
+  color: var(--basic-black);
+  background-color: #F8F7F4;
+  border-radius: 6px;
+  top: 338px;
+  bottom: auto;
+  width: 427px;
+  padding: 20px 24px 27px 25px;
+}
+
+.modal-contact h2 {
+  margin: 0;
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+
+.modal-show{
+  display: block;
+}
+
+/* Modal close */
+
+.modal-close{
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  background-image: url("../img/X-big.svg");
+}
+
+.btn--contact_form{
+	background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+	box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+	float:right;
+}
+/* Contact form */
+
+.contact_form p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.сontact_form-name,
+.contact_form-email{
+  width: 267px;
+  padding:16px 14px;
+  font: inherit;
+  color: var(--basic-gray);
+  background: #FFFFFF;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.contact_form-message{
+	width:428px;
+	height: 154px;
+	resize: none; 
+	padding:16px 14px;
+	background: #FFFFFF;
+	border: 1px solid rgba(178, 178, 178, 0.52);
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.contact-form input:hover{border: 2px solid rgba(178, 178, 178, 0.52);}
+.contact_form-email:focus{
+	border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+
 

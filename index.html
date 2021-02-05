@@ -16,7 +16,19 @@
 			<a href="/"><img src="img/logo.svg" alt="логотип магазина" /></a>
 			<nav class="nav header__nav">
 				<ul class="nav__list">
-					<li class="nav__item"><a href="catalog.html">Каталог</a></li>
+					<li class="nav__item">
+						<a href="catalog.html">Каталог</a>
+						<div class="nav__item__submenu">
+							<h2>Новинки</h2>
+							<ul>
+								<li>Сливочное</li>
+								<li>Щерберты</li>
+								<li>Фрутовый лед</li>
+								<li>Мелорин</li>
+							</ul>
+						</div>
+
+					</li>
 					<li class="nav__item"><a href="dostavka.html">Доставка и оплата</a></li>
 					<li class="nav__item"><a href="company.html">О компании</a></li>
 				</ul>
@@ -172,5 +184,27 @@
   		 </div>
 		</footer>
 	</div>
+	<section class="modal modal-contact">
+		<h2>Мы обязательно вам ответим!</h2>
+		<form class="form contact_form">
+    		<p>
+      			<label class="visually-hidden" for="сontact_form-user">Имя</label>
+      			<input class="сontact_form-name" id = "contact_form-user" type="text" size="40" name="name" placeholder="Имя Фамилия"></input>
+    		</p>
+    		<p>
+      			<label class="visually-hidden" for="contact_form-post">Email</label>
+      			<input class="contact_form-email" id="form_contact-post" type="email" name="email" placeholder="email@example.com">
+    		</p>
+    		<p>
+      			<label class="visually-hidden" for="contact_form-text">Сообщение</label>
+      			<textarea class="contact_form-message" id="form_contact-text" name="message" placeholder="В свободной форме"></textarea>
+     		</p>
+        
+			<button class="btn btn--contact_form" type="submit">Отправить</button>
+
+		</form>
+		<button class="modal-close" type="button" aria-label="Закрыть"></button>
+	</section>
+	<script src="js/contact_us.js"></script>
 </body>
 </html>
