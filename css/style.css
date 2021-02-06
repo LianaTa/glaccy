@@ -101,29 +101,74 @@ p{
 	display: inline-block;
 	margin-left: 4px;
 }
-.nav__item a {
+.nav__item a{
+  font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
   padding: 9px 13px 11px 13px;
-  border-radius: 26px;
 }
 .nav__item a:hover{
 	color:var(--basic-black);
 	background-color:  var(--basic-white);
+	border-radius: 26px;
 }
 .nav__item a:focus{
+	background: #EDEDED;
+	box-shadow: inset 0px 2px 1px #696969;
 	color:var(--basic-black);
-	background-color: var(--basic-light-gray);
+	/*background-color: var(--basic-light-gray);*/
 	padding: 9px 13px 11px 13px;
 	border-radius: 26px;
 }
-.nav__item_current a:{
+.nav__item_current a{
   background-color: var(--basic-light-orange);
+  color:  var(--basic-white);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
   padding: 9px 13px 11px 13px;
   border-radius: 26px;
 }
-
+.nav__item__submenu{
+	display: none;
+	position:absolute;
+	background-color: var(--basic-white);
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+	border: 1px solid #323232 20 %;
+	padding: 13px 6px 14px 9px; 
+	left: 184px;
+	top: 59px;
+}
+.nav__item__submenu--show{
+	display: block;
+}
+.nav__item__submenu ul{
+	padding:0px;
+	list-style: none;
+}
+.nav__item__submenu h2{
+	margin: 0px;
+	padding-left: 21px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--basic-black);
+}
+.nav__item__submenu hr{
+	width:128px;
+	clear:  rgba(50, 50, 50, 0.2);
+}
+.submenu__item{
+	font-weight: normal;
+	color:var(--basic-black);
+	font-size: 14px;
+    line-height: 16px;
+    width: 143px;
+    height: 27px;
+    padding-left:21px;
+}
 
 /* User navigation */
 .user-nav{
@@ -260,6 +305,10 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 	padding: 8px 16px;
 	background:var(--basic-light-gray);
 	color:var(--basic-white);
+}
+.btn_search{
+
+
 }
 .btn--specials{
 	float: right;
@@ -603,6 +652,7 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 /* Modal Contact us */
 
 .modal-contact{
+	position: absolute;
   display: none;
   color: var(--basic-black);
   background-color: #F8F7F4;
@@ -623,6 +673,18 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 
 .modal-show{
   display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+.background-shadow{
+	position: absolute;
+	width: 100%;
+	height: 3000px;
+	left: 0px;
+	top: 0px;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 /* Modal close */
@@ -656,12 +718,21 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 .contact_form-email{
   width: 267px;
   padding:16px 14px;
-  font: inherit;
-  color: var(--basic-gray);
   background: #FFFFFF;
   border: 1px solid rgba(178, 178, 178, 0.52);
   box-sizing: border-box;
   border-radius: 4px;
+  color: var(--basic-black);
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+ line-height: 20px;
+}
+.contact_form-message:hover,.сontact_form-name:hover,.contact_form-email:hover{
+	border: 2px solid rgba(178, 178, 178, 0.52);
+}
+.contact_form-message:focus,.сontact_form-name:focus,.contact_form-email:focus{
+	border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 .contact_form-message{
@@ -673,12 +744,53 @@ linear-gradient(180deg, #F26843 0%, #E74A35 100%);
 	border: 1px solid rgba(178, 178, 178, 0.52);
 	box-sizing: border-box;
 	border-radius: 4px;
+	color: var(--basic-black);
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
 }
+::-webkit-input-placeholder {font-weight:normal;color:var(--basic-gray);}
+::-moz-placeholder          {font-weight:normal;color:var(--basic-gray);}/* Firefox 19+ */
+:-moz-placeholder           {font-weight:normal;color:var(--basic-gray);}/* Firefox 18- */
+:-ms-input-placeholder      {font-weight:normal;color:var(--basic-gray);}
+/* Animations */
 
-.contact-form input:hover{border: 2px solid rgba(178, 178, 178, 0.52);}
-.contact_form-email:focus{
-	border: 2px solid rgba(46, 136, 228, 0.52);
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
 
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
 
-
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}

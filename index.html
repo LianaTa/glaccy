@@ -10,21 +10,23 @@
 	<title>Интернет-магазин мороженого Глейси</title>
 </head>
 <body>
-	<div class="wrapper bg-gradient">
+	<div class="shadow-bg"></div>
+	<div class="wrapper">
 		<header class="header">
 			<h1 class="visually-hidden">Магазин мороженого Gllacy</h1>
 			<a href="/"><img src="img/logo.svg" alt="логотип магазина" /></a>
 			<nav class="nav header__nav">
 				<ul class="nav__list">
-					<li class="nav__item">
+					<li class="nav__item nav__item_current catalog">
 						<a href="catalog.html">Каталог</a>
 						<div class="nav__item__submenu">
 							<h2>Новинки</h2>
+							<hr  noshade size=1>
 							<ul>
-								<li>Сливочное</li>
-								<li>Щерберты</li>
-								<li>Фрутовый лед</li>
-								<li>Мелорин</li>
+								<li class="submenu__item">Сливочное</li>
+								<li class="submenu__item">Щерберты</li>
+								<li class="submenu__item">Фрутовый лед</li>
+								<li class="submenu__item">Мелорин</li>
 							</ul>
 						</div>
 
@@ -34,7 +36,7 @@
 				</ul>
 			</nav>
 			<ul class="user-nav">
-				<li class="user-nav__item"><button class="btn btn_grey btn_search"></button></li>
+				<li class="user-nav__item"><button class="btn btn_grey btn_search"><img src="img/search.svg" ></button></li>
 				<li class="user-nav__item "><button class="btn btn_grey btn_signin">Войти</button></li>
 				<li class="user-nav__item"><button class="btn btn_grey btn_cart">Пусто</button></li>
 			</ul>
@@ -133,7 +135,7 @@
 						<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 						<form class="form subscribe__form">
 							<input  class="form__email" type="email" name="email" required >
-							<button class="btn form__btn" type="submit">Отправить</button>
+							<button class="btn" type="submit">Отправить</button>
 						</form>
 					</div>
 				</article>
