@@ -47,11 +47,30 @@ contactForm.addEventListener("submit", function (evt) {
   }
 });
 
+function changeBackground(Element) {
+	var j = Element.getAttribute("aria-label");
+    var controls =  document.querySelectorAll(".slider__controls-btn");
+    for (var i = 0; i < controls.length; i++) {
+		if (i==j){controls[i].classList.add("slider__controls-btn--current");document.body.classList.add("site-wrapper-"+j);}
+		else{
+    	controls[i].classList.remove("slider__controls-btn--current");
+    	document.body.classList.remove("site-wrapper-"+i);}
+	}
+	var wallpapers =  document.querySelectorAll(".slider__item");
+    for (var i = 0; i < wallpapers.length; i++) {
+		if (i==j){wallpapers[i].classList.add("slider__item--current");}else
+		wallpapers[i].classList.remove("slider__item--current");
+    }
+
+}	
+
+
+
 const catalogLink = document.querySelector('.catalog');
 const navSubmenu = document.querySelector('.nav__item__submenu');
 catalogLink.onmouseenter = function() {
 	navSubmenu.classList.add("nav__item__submenu--show");
 };
 catalogLink.onmouseleave = function() {
-	navSubmenu.classList.remove("nav__item__submenu--show");
+	//navSubmenu.classList.remove("nav__item__submenu--show");
 };
